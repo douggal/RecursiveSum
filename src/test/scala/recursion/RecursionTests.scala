@@ -1,10 +1,16 @@
 package recursion
 
-import org.scalatest.FunSuite
-import Recursion.sum
+import org.scalatest.funsuite.AnyFunSuite
+import recursion.Recursion.sum
 
-class RecursionTests extends FunSuite {
-    
+class RecursionTests extends AnyFunSuite {
+
+    /*
+    https://stackoverflow.com/questions/62679932/funsuite-missing-even-though-scalatest-is-imported
+    "...FunSuite ... 3.2.0 it has been removed entirely. Hence from 3.2.0 onwards you should define like so
+    import org.scalatest.funsuite.AnyFunSuite"
+     */
+
     test("a simple case works") {
         val x = sum(List(1,2,3,4))
         assert(x == 10)
